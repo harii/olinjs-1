@@ -1,0 +1,8 @@
+{
+  "name": "node-example",
+  "version": "0.0.1",
+  "main": "app.js",
+  "license": "MIT",
+  "author": "",
+  "readmeFilename": "README.md"
+}
