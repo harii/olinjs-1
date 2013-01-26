@@ -1,0 +1,9 @@
+// alright here i'm gonna try and write the code that 
+//  figures out wtf to do with different types of requests.
+
+// i guess it'll be useful to import the server module, because technically
+//  this router is in the server. not sure how that works.
+
+
+
+
