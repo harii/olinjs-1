@@ -1,6 +1,6 @@
 
 
-function route(handle, pathname, response) {
+function route(handle, pathname, response, postData) {
 
     // alright, so the request comes in the form of a URL or button push.
     // let's assume it's a URL for the time being.
@@ -9,7 +9,7 @@ function route(handle, pathname, response) {
     
     console.log("About to route a request for " + pathname);
     if (typeof handle[pathname] === 'function') {
-        handle[pathname](response);
+        handle[pathname](response, postData);
     } else {
         console.log("No request handler found for " + pathname);
         response.writeHead(404, {"Content-Type":"text/plain"});

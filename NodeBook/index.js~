@@ -9,7 +9,7 @@ var requestHandlers = require("./requestHandlers");
 var handle = {};
 handle["/"] = requestHandlers.start;
 handle["/start"] = requestHandlers.start;
-handle["/favicon.ico"] = requestHandlers.start; // FIX LATER
+//handle["/favicon.ico"] = requestHandlers.start; // FIX LATER
 handle["/upload"] = requestHandlers.upload;
 
 // here we ask the server to start - it's how we exported it

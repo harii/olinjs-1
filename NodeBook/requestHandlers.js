@@ -1,7 +1,8 @@
 // how to deal requests
 
+var querystring = require("querystring");
 
-function start(response) {
+function start(response, postData) {
     console.log("Request handler 'start' was called.");
 
     var body = '<html>'+
@@ -22,10 +23,12 @@ function start(response) {
     response.end(); // gotta specify that we're done
 }
 
-function upload(response) {
+function upload(response, postData) {
     console.log("Request handler 'upload' was called.");
     response.writeHead(200, {"Content-Type": "text/plain"}); // gotta specify the format
-    response.write("Hello Upload"); // gotta specify what to say
+    response.write("You've sent the text: " + 
+    // querystring pulls out just the text from the submission form
+    querystring.parse(postData).text); // gotta specify what to say
     response.end(); // gotta specify that we're done
 }
 

@@ -1,6 +1,6 @@
 
 
-function router(handle, pathname, response) {
+function route(handle, pathname, response) {
 
     // alright, so the request comes in the form of a URL or button push.
     // let's assume it's a URL for the time being.
@@ -18,5 +18,5 @@ function router(handle, pathname, response) {
     }
 }
 
-exports.route = router;
+exports.route = route;
 
