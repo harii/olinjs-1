@@ -17,8 +17,7 @@ function start(response) {
       '</body>'+
       '</html>';
 
-
-    response.writeHead(200, {"Content-Type": "text/plain"}); // gotta specify the format
+    response.writeHead(200, {"Content-Type": "text/html"}); // gotta specify the format
     response.write(body); // gotta specify what to say
     response.end(); // gotta specify that we're done
 }
