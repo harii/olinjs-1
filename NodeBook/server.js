@@ -10,12 +10,9 @@ function start(route, handle) {
     http.createServer(function(request, response) {
         var pathname = url.parse(request.url).pathname;
         console.log("Request for " + pathname + " received.");
-        
-        route(handle, pathname);
-        
-        response.writeHead(200, {"Content-Type": "text/plain"}); // gotta specify the format
-        response.write("Hello World"); // gotta specify what to say
-        response.end(); // gotta specify that we're done
+
+        route(handle, pathname, response);
+
 
 
     }).listen(8888);
